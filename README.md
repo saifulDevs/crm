@@ -43,3 +43,59 @@ A modern, modular, and AI-enhanced CRM platform inspired by **ServiceNow**, buil
 git clone https://github.com/saifulDevs/crm.git
 cd crm
 ```
+
+##  Project Structure
+crm/
+└── src/
+    ├── main.py
+    ├── api.py
+    ├── exceptions.py
+    ├── logging.py
+    ├── rate_limiter.py
+    ├── database/
+    │   ├── __init__.py
+    │   ├── connection.py
+    │   └── seed.py
+    ├── auth/
+    │   ├── __init__.py
+    │   ├── controller.py
+    │   ├── models.py
+    │   ├── schema.py
+    │   ├── service.py
+    │   └── utils.py
+    ├── users/
+    │   ├── __init__.py
+    │   ├── controller.py
+    │   ├── models.py
+    │   ├── schema.py
+    │   ├── service.py
+    │   └── utils.py
+    ├── todos/
+    │   ├── __init__.py
+    │   ├── controller.py
+    │   ├── models.py
+    │   ├── schema.py
+    │   ├── service.py
+    │   └── utils.py
+    ├── agents/
+    │   ├── __init__.py
+    │   ├── controller.py
+    │   ├── models.py
+    │   ├── schema.py
+    │   ├── service.py
+    │   └── utils.py
+    ├── tasks/
+    │   ├── __init__.py
+    │   ├── controller.py
+    │   ├── models.py
+    │   ├── schema.py
+    │   ├── service.py
+    │   └── utils.py
+    ├── tickets/
+    │   ├── __init__.py
+    │   ├── controller.py
+    │   ├── models.py
+    │   ├── schema.py
+    │   ├── service.py
+    │   └── utils.py
+
