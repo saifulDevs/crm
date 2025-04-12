@@ -10,3 +10,11 @@ passlib
 bcrypt==4.0.1
 python-multipart
 email-validator
+openai
+langchain
+transformers
+torch
+redis
+# celery
+httpx
+isort

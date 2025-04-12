@@ -1,37 +1,45 @@
-# crm
+# 🧠 AI Agent-Based CRM System
 
-What's included in the template?
+A modern, modular, and AI-enhanced CRM platform inspired by **ServiceNow**, built with **FastAPI** (backend), **Remix** (frontend), and **PostgreSQL** for storage.
 
-- Domain layer with sample entities.
-- Application layer with abstractions for:
-  - Example use cases
-  - Cross-cutting concerns (logging, validation)
-- Infrastructure layer with:
-  - Authentication
-  - SQLAlchemy, PostgreSQL (you can change to SQLite for development in database/core.py)
-  - Rate limiting on registration
-- Testing projects
-  - Pytest unit tests
-  - Pytest integration tests (e2e tests)
+## ✨ Features
 
-I'm open to hearing your feedback about the template and what you'd like to see in future iterations. DM me on LinkedIn or email me.
+### ✅ Core Modules
 
---
+- **User Authentication** (JWT + Role-Based Access)
+- **Agent Management** (Add, Assign, Track Performance)
+- **Customer Management** (CRM with status and tagging)
+- **Task & Workflow Automation**
+- **Activity Logs & Notes**
+- **Customizable Dashboards**
+- **Notifications**
 
-# Install all dependencies.
-- Run `pip install -r requirements-dev.txt`
+### 🤖 AI Capabilities (Upcoming)
 
-# How to run app. Using Docker with PostgreSQL.
-- Install Docker Desktop
-- Run `docker compose up --build`
-- Run `docker compose down` to stop all services
+- AI-powered chatbot for agents
+- Email & lead summarization
+- Auto-classification & task recommendations
 
-# How to run locally without postgres or docker.
-- in database/core.py change the DATABASE_URL to sqlite
-- run `uvicorn src.main:app --reload`
+---
 
-# How to run tests.
-- Run `pytest` to run all tests
+## 📦 Tech Stack
 
+| Layer     | Tech                         |
+| --------- | ---------------------------- |
+| Backend   | FastAPI, SQLAlchemy, Alembic |
+| Database  | PostgreSQL                   |
+| Auth      | JWT, Passlib, Bcrypt         |
+| Frontend  | Remix (React), Tailwind CSS  |
+| AI Layer  | (Planned) LangChain/OpenAI   |
+| Dev Tools | Docker, dotenv, SlowAPI      |
 
-Cheers!# crm
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/saifulDevs/crm.git
+cd crm
+```
