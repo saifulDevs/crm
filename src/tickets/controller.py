@@ -3,16 +3,16 @@ from sqlalchemy.orm import Session
 from uuid import UUID
 from . import models, schemas, service
 from ..database.core import get_db
-from ..rate_limiter import limiter
+
 
 router = APIRouter(
-    prefix="/tickets",
-    tags=["tickets"],
+    prefix="/todos",
+    tags=["Todos"]
 )
 
 
-@router.post("/", response_model=schemas.TicketResponse, status_code=status.HTTP_201_CREATED)
 
+@router.post("/", response_model=schemas.TicketResponse, status_code=status.HTTP_201_CREATED)
 async def create_ticket(
     ticket_request: schemas.TicketCreate, db: Session = Depends(get_db)
 ):

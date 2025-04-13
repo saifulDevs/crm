@@ -9,9 +9,9 @@ from src.tickets.controller import router as tickets_router
 # You can keep adding more routers as your modules grow
 
 def register_routes(app: FastAPI):
-    app.include_router(auth_router, prefix="/auth", tags=["Auth"])
-    app.include_router(users_router, prefix="/users", tags=["Users"])
-    app.include_router(todos_router, prefix="/todos", tags=["Todos"])
-    app.include_router(agents_router, prefix="/agents", tags=["Agents"])
-    app.include_router(tasks_router, prefix="/tasks", tags=["Tasks"])
-    app.include_router(tickets_router, prefix="/tickets", tags=["Tickets"])
+    app.include_router(auth_router, prefix="", tags=["Auth"])
+    app.include_router(users_router, prefix="", tags=["Users"])
+    app.include_router(todos_router, prefix="", tags=["Todos"])
+    app.include_router(agents_router, prefix="", tags=["Agents"])
+    app.include_router(tasks_router, prefix="", tags=["Tasks"])
+    app.include_router(tickets_router, prefix="", tags=["Tickets"])
