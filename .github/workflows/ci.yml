@@ -29,4 +29,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/fastapi-crm:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/crm:latest

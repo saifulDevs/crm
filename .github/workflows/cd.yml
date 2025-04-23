@@ -20,7 +20,7 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           port: 22
           script: |
-            sudo docker pull ${{ secrets.DOCKER_USERNAME }}/fastapi-crm:latest
-            sudo docker stop fastapi-crm || true
-            sudo docker rm fastapi-crm || true
-            sudo docker run -d --name fastapi-crm -p 80:80 ${{ secrets.DOCKER_USERNAME }}/fastapi-crm:latest
+            sudo docker pull ${{ secrets.DOCKER_USERNAME }}/crm:latest
+            sudo docker stop crm || true
+            sudo docker rm crm || true
+            sudo docker run -d --name crm -p 80:80 ${{ secrets.DOCKER_USERNAME }}/crm:latest
