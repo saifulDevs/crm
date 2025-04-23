@@ -1,0 +1,26 @@
+name: CD - Deploy to EC2
+
+on:
+  workflow_run:
+    workflows: ["CI - Build & Push Docker Image"]
+    types:
+      - completed
+
+jobs:
+  deploy:
+    name: Deploy Docker Image to EC2
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v0.1.6
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          port: 22
+          script: |
+            sudo docker pull ${{ secrets.DOCKER_USERNAME }}/fastapi-crm:latest
+            sudo docker stop fastapi-crm || true
+            sudo docker rm fastapi-crm || true
+            sudo docker run -d --name fastapi-crm -p 80:80 ${{ secrets.DOCKER_USERNAME }}/fastapi-crm:latest
